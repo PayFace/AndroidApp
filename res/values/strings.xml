@@ -4,5 +4,8 @@
     <string name="app_name">PayFace</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="banner">Welcome to PayFace</string>
+    <string name="startPayFace">Let\'s Get Payin!</string>
+    <string name="title_activity_capture">CaptureActivity</string>
 
 </resources>
