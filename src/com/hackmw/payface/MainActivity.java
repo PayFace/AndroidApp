@@ -72,6 +72,8 @@ public class MainActivity extends Activity {
     }
     
     public void imageCapture(View v) {
+    	TextView t = (TextView)findViewById(R.id.textView2);
+    	t.setText("");
     	Intent myIntent = new Intent("com.google.zxing.client.android.SCAN");
     	myIntent.putExtra("SCAN_MODE", "QR_CODE_MODE");
     	myIntent.putExtra("SAVE_HISTORY", false);
@@ -88,7 +90,7 @@ public class MainActivity extends Activity {
                     TextView t = (TextView)findViewById(R.id.textView2);
 //                    t.setText(contents);
                  // HTTP
-                    String url = "";//http://payface.cfapps.io/requestPayment.json?userId=TESTMERCHANT1&paymentToken=" + contents + "&amountUSD=5000";
+                    String url = "http://payface.cfapps.io/requestPayment.json?userId=TESTMERCHANT1&paymentToken=" + contents + "&amountUSD=5000";
                     InputStream is = null;
                     String result = "";
             		try {	    	
@@ -148,6 +150,7 @@ public class MainActivity extends Activity {
             } else 
             if (resultCode == RESULT_CANCELED) {
               // Handle cancel
+            	
             }
         }
     }
