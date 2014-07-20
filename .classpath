@@ -5,8 +5,8 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="lib" path="/home/colby/workspace/PayFace/libs/android-core-3.1.0-javadoc.jar"/>
-	<classpathentry kind="lib" path="/home/colby/workspace/PayFace/libs/json-simple-1.1.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/home/colby/workspace/PayFace/libs/android-async-http-1.4.5.jar"/>
+	<classpathentry kind="lib" path="libs/android-async-http-1.4.5.jar"/>
+	<classpathentry kind="lib" path="libs/android-core-3.1.0-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
