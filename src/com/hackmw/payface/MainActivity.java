@@ -23,6 +23,7 @@ import android.app.ActionBar;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.util.Log;
@@ -74,10 +75,19 @@ public class MainActivity extends Activity {
     public void imageCapture(View v) {
     	TextView t = (TextView)findViewById(R.id.textView2);
     	t.setText("");
-    	Intent myIntent = new Intent("com.google.zxing.client.android.SCAN");
-    	myIntent.putExtra("SCAN_MODE", "QR_CODE_MODE");
-    	myIntent.putExtra("SAVE_HISTORY", false);
-    	startActivityForResult(myIntent, 0);
+    	try
+    	{
+    		Intent myIntent = new Intent("com.google.zxing.client.android.SCAN");
+    		myIntent.putExtra("SCAN_MODE", "QR_CODE_MODE");
+    		myIntent.putExtra("SAVE_HISTORY", false);
+    		startActivityForResult(myIntent, 0);
+    	}
+    	catch(Exception e)
+    	{
+    		Uri marketUri = Uri.parse("market://details?id=com.google.zxing.client.android");
+    		Intent marketIntent = new Intent(Intent.ACTION_VIEW,marketUri);
+    		startActivity(marketIntent);
+    	}
     }
     
     
